@@ -20,10 +20,9 @@ jobs:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
     steps:
-      - name: Checkout code
       - uses: actions/checkout@v4
       - name: Install Ruby and gems
-      - uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2.1
           bundler-cache: true
